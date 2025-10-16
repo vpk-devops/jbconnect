@@ -1,0 +1,61 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+.tailwind-pagination .swiper-pagination-bullet {
+  @apply w-2 h-2 bg-[#23476D] opacity-40 rounded-full;
+}
+
+.tailwind-pagination .swiper-pagination-bullet-active {
+  @apply opacity-100;
+}
+.custom-arch-shape {
+  clip-path: path('M 0 0 Q 50% 0 100% 50% Q 100% 100% 50% 100% Q 0 100% 0 50% Q 0 0 0 0');
+}
+
+/* 
+.custom-center-modal {
+  --width: 100%;
+  --height: auto;
+  --border-radius: 0px;
+  --background: transparent; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ */
+ion-searchbar.custom-searchbar {
+padding:0px;
+padding-bottom:0px;
+padding-top:0px;
+    min-height: 30px;
+  --background: white; /* Ensures the background of the input itself is white */
+  --border-radius: 12px; /* Adjust this value for more or less rounded corners */
+  --box-shadow: none; /* Removes any default shadow if present */
+  border: 1px solid #274C77FF; /* Custom blue border, you can adjust the color */
+  color: #274C77FF; /* Custom blue text color for the input */
+  margin-left:8px;
+  margin-right: 16px;
+border-radius: 8px;
+  width:95%
+}
+
+
+ion-searchbar.custom-searchbar::part(searchbar-input) {
+  padding-inline-start: 60px; /* Adjust this value to create the gap */
+  /* You can also adjust padding of the icon itself to move it */
+  /* or padding-left on the host element if needed, but start with searchbar-input */
+}
+
+ion-searchbar.custom-searchbar::part(search-icon) {
+  color: #007bff;
+  
+  margin-inline-start: 90px !important;
+  
+}
