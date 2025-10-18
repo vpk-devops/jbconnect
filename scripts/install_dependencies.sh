@@ -6,5 +6,5 @@ rm -rf node_modules
 
 
 # Install Node.js dependencies
-npm install
-npm run dev  
+sudo npm install
+sudo npm run dev   
