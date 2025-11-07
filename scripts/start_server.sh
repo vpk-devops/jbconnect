@@ -1,8 +1,6 @@
 #!/bin/bash
+cd /home/ec2-user/myapp
 
-cd /home/ec2-user/my-node-app
-
-# Start the app in background (no PM2)
-nohup node app.js > app.log 2>&1 &
-
-echo "Node.js app started"
+# Start or restart PM2 static server
+pm2 serve dist 3000 --name myapp --spa --watch
+pm2 save
