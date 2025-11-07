@@ -1,10 +1,11 @@
 #!/bin/bash
-cd /home/ec2-user/my-node-app
+cd /home/ec2-user/myapp
 
-# Optional: Clean old install
-rm -rf node_modules
+# Install dependencies cleanly
+npm ci
 
-
-# Install Node.js dependencies
-sudo npm install
-sudo npm run dev   
+# Install PM2 globally if not installed
+if ! command -v pm2 &> /dev/null
+then
+  sudo npm install -g pm2
+fi
